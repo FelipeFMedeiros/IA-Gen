@@ -13,7 +13,7 @@ interface AulaTemplateProps {
     titulo: string;
     descricao: string;
     objetivos: string[];
-    prompts: Prompt[];
+    prompts?: Prompt[];
     materiaisDownload?: {
         nome: string;
         arquivo: string;
@@ -86,10 +86,11 @@ const AulaTemplate = ({
                 </div>
 
                 {/* Prompts */}
+                {prompts && prompts.length > 0 && (
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
                     <h2 className="text-2xl font-bold text-gray-800 mb-6">Prompts para Usar nas IAs</h2>
                     <div className="space-y-6">
-                        {prompts.map((prompt, index) => (
+                        {prompts?.map((prompt, index) => (
                             <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
                                 <div className={`bg-gradient-to-r ${color} text-white px-4 py-3 font-semibold`}>
                                     {prompt.titulo}
@@ -131,6 +132,7 @@ const AulaTemplate = ({
                         ))}
                     </div>
                 </div>
+                )}
 
                 {/* Materiais para Download */}
                 {materiaisDownload && materiaisDownload.length > 0 && (

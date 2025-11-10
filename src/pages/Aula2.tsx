@@ -3,40 +3,45 @@ import AulaTemplate from '../components/AulaTemplate';
 const Aula2 = () => {
     const prompts = [
         {
-            titulo: 'Prompt 1: Estrutura de um Bom Prompt',
-            texto: 'Crie um guia passo a passo sobre como estruturar um prompt eficaz para IA. Inclua elementos essenciais como contexto, tarefa específica, formato desejado e tom de voz.',
+            titulo: 'Prompt 1: Criando Perguntas sobre O Pequeno Príncipe de forma simples',
+            texto: 'Crie perguntas sobre O Pequeno Príncipe'
         },
         {
-            titulo: 'Prompt 2: Refinando Respostas',
-            texto: 'Você é um assistente pedagógico especializado em educação especial. Preciso que você [TAREFA ESPECÍFICA]. O público-alvo são alunos com [TIPO DE DEFICIÊNCIA], na faixa etária de [IDADE]. O material deve ser [CARACTERÍSTICAS DESEJADAS]. Forneça exemplos práticos e adaptados.',
-            exemplo: 'Substitua os campos entre colchetes com suas informações específicas.',
+            titulo:  'Prompt 2: Criando Perguntas sobre O Pequeno Príncipe de forma avançada',
+            texto: 'Atue como um professor de Língua Portuguesa especialista em criação de atividades pedagógicas para o Ensino Fundamental II.\n\nContexto: Vou trabalhar o capítulo XXI de "O Pequeno Príncipe" (o encontro com a raposa) com uma turma do 7º ano. Meu objetivo é que os alunos desenvolvam a capacidade de interpretação de texto e pensamento crítico, indo além da compreensão superficial.\n\nSua tarefa é: Criar 5 perguntas de interpretação de texto sobre esse capítulo.\n\nInstruções específicas: As perguntas devem exigir que o aluno reflita sobre os sentimentos dos personagens, o significado de metáforas e a moral da história. Evite perguntas cuja resposta seja uma simples cópia de trecho do livro ou um fato óbvio. Inclua uma pergunta que faça uma ligação entre o conceito de "cativar" no livro e uma experiência real da vida do aluno.\n\nFormato de saída: Para cada pergunta, forneça também um gabarito comentado com a resposta esperada e os objetivos de aprendizagem daquela questão.\n\nApresente a resposta em uma tabela simples com 3 colunas: "Pergunta", "Gabarito", "Objetivo de Aprendizagem".'
         },
         {
-            titulo: 'Prompt 3: Iteração e Melhoria',
-            texto: 'A resposta anterior está boa, mas preciso que você: 1) Simplifique a linguagem, 2) Adicione mais exemplos visuais, 3) Torne o conteúdo mais interativo.',
+            titulo: 'Prompt 3: Primeiro Exercício',
+            texto: 'Você é um divulgador científico especializado em explicar conceitos complexos para adolescentes. Sua tarefa é criar um material de apoio para uma aula de Ciências do 7º ano sobre fotossíntese. Baseie sua explicação em conceitos científicos consolidados. Estruture a resposta da seguinte forma:\n\nTítulo: Chamativo e simples.\n\nAnalogia Inicial: Use uma analogia envolvendo uma "fábrica de comida" para introduzir o conceito.\n\nLista Simples dos "Ingredientes" e "Produtos": Crie uma tabela de duas colunas mostrando o que a planta "pega" da natureza (Ingredientes) e o que ela "fabrina" (Produtos).\n\nExplicação Curta: Em no máximo 3 parágrafos, explique o processo de forma simples, mencionando a clorofila e a importância da luz solar.\n\nFato Curioso: Finalize com um fato interessante ou inesperado sobre a fotossíntese.\n\nA linguagem deve ser acessível, direta e engajadora, evitando jargões técnicos desnecessários.'
         },
         {
-            titulo: 'Prompt 4: Prompt com Persona',
-            texto: 'Atue como um professor de educação especial com 20 anos de experiência em AEE. Seu objetivo é criar materiais adaptados que sejam inclusivos e eficazes. [CONTINUE COM SUA SOLICITAÇÃO ESPECÍFICA]',
+            titulo: 'Prompt 4: Segundo Exercício',
+            texto: 'Atue como um especialista em análise de dados educacionais. Analise a planilha abaixo e identifique:\n\n1. Os 3 principais padrões de desempenho da turma;\n2. Estudantes com desempenho acima da média;\n3. Estudantes que precisam de intervenção imediata;\n4. Habilidades que a turma domina e as que precisam de reforço.\n\n[Dados da planilha aqui]\n\nApresente a análise em tópicos objetivos.'
         },
+        {
+            titulo: 'Prompt 5: Terceiro Exercício',
+            texto: 'Com base na análise anterior, elabore um relatório profissional para reunião de pais com a seguinte estrutura:\n\nSEÇÃO 1: DESEMPENHO GERAL DA TURMA\n- Médias por competência;\n- Evolução ao longo do bimestre.\n\nSEÇÃO 2: ANÁLISE DETALHADA\n- Grupos de desempenho (excelente, satisfatório, atenção);\n- Habilidades consolidadas e fragilidades.\n\nSEÇÃO 3: RECOMENDAÇÕES PEDAGÓGICAS\n- Intervenções para a turma\n- Ações individuais específicas\n- Ações individuais específicas\n\nSEÇÃO 4: PRÓXIMOS PASSOS\n- Plano de ação para o próximo bimestre\n\nUse linguagem clara, dados concretos e seja construtivo nas críticas.'
+        },
+        {
+            titulo: 'Prompt 6: Criação de imagens - Método 1',
+            texto: 'Crie uma imagem que ilustre o slide cujo título é "CRIAÇÃO DE IMAGENS COM IA GENERATIVA". A imagem deve retratar um professor trabalhando de maneira inspiradora e sonhadora. O cenário é de uma biblioteca calma cheia de livros coloridos. O estilo artístico deverá ser animação futurista da disney.'
+        },
+        {
+            titulo: 'Prompt 7: Criação de imagens - Método 2',
+            texto: 'Ipê-amarelo florido majestoso (assunto) em uma paisagem do cerrado com gramíneas altas e solo avermelhado (configuração), no estilo ilustração científica detalhada (estilo artístico), com atmosfera ensolarada e vibrante (humor), mostrando raízes profundas, folhas verdes brilhantes e detalhes dos botões florais (detalhes específicos)'
+        }
     ];
 
     const objetivos = [
-        'Dominar as técnicas de criação de prompts eficazes',
-        'Aprender a contextualizar adequadamente as solicitações para IA',
-        'Desenvolver habilidades de iteração e refinamento de prompts',
-        'Compreender como obter respostas mais precisas e úteis',
-        'Aplicar estratégias de prompt engineering no contexto educacional',
+        'Apresentar os conceitos básicos da IA generativa e a técnica da Engenharia de Prompt',
+        'Demonstrar como aplicar essas tecnologias no cotidiano profissional dos professores',
+        'Explorar como transformar instruções simples em respostas complexas e personalizadas e, dessa forma obter resultados aprimorados',
     ];
 
     const materiaisDownload = [
         {
-            nome: 'Guia de Engenharia de Prompts',
-            arquivo: '/materiais/aula2-engenharia-prompts.pdf',
-        },
-        {
-            nome: 'Template de Prompts para AEE',
-            arquivo: '/materiais/aula2-templates.pdf',
+            nome: 'Apresentação - Engenharia de Prompts',
+            arquivo: '/materiais/AULA2.pdf',
         },
     ];
 
@@ -44,11 +49,11 @@ const Aula2 = () => {
         <AulaTemplate
             numeroAula={2}
             titulo="Engenharia de Prompts"
-            descricao="Aprenda a arte e a ciência de criar prompts eficazes que gerem respostas de alta qualidade das IAs. Nesta aula, você dominará técnicas essenciais para comunicar-se de forma clara e objetiva com as ferramentas de IA."
+            descricao="Esta aula tem como objetivo apresentar, de forma clara e prática, os conceitos básicos da IA generativa e a técnica da Engenharia de Prompt – a habilidade de operar com eficácia com essas ferramentas. Nosso foco é demonstrar como o professor pode utilizar essas tecnologias para otimizar o planejamento de aulas, criar materiais didáticos acessíveis e diversificados, e desenvolver estratégias pedagógicas mais engajadoras e inclusivas."
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
-            color="from-purple-500 to-pink-500"
+            color="from-[#10bb82] to-[#0d8f66]"
         />
     );
 };

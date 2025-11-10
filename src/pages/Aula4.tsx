@@ -35,12 +35,8 @@ const Aula4 = () => {
 
     const materiaisDownload = [
         {
-            nome: 'Templates de Monitoramento',
-            arquivo: '/materiais/aula4-templates-monitoramento.pdf',
-        },
-        {
-            nome: 'Guia de Indicadores de Progresso',
-            arquivo: '/materiais/aula4-indicadores.pdf',
+            nome: 'Apresentação - Monitoramento do Desenvolvimento dos Alunos',
+            arquivo: '/materiais/AULA4.pdf',
         },
     ];
 
@@ -52,7 +48,7 @@ const Aula4 = () => {
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
-            color="from-orange-500 to-red-500"
+            color="from-[#7521ac] to-[#a855f7]"
         />
     );
 };

@@ -1,32 +1,17 @@
 import AulaTemplate from '../components/AulaTemplate';
 
 const Aula1 = () => {
-    const prompts = [
-        {
-            titulo: 'Prompt 1: Entendendo IA Generativa',
-            texto: 'Explique de forma simples e objetiva o que é Inteligência Artificial Generativa e como ela pode ser aplicada na educação especial para criar materiais adaptados.',
-        },
-        {
-            titulo: 'Prompt 2: Benefícios da IA no AEE',
-            texto: 'Liste 5 benefícios específicos do uso de IA Generativa no Atendimento Educacional Especializado, considerando diferentes tipos de deficiências.',
-        },
-        {
-            titulo: 'Prompt 3: Ferramentas Disponíveis',
-            texto: 'Quais são as principais ferramentas de IA Generativa gratuitas que professores podem usar para criar recursos educacionais? Liste e descreva brevemente cada uma.',
-        },
-    ];
-
     const objetivos = [
-        'Compreender os conceitos básicos de Inteligência Artificial Generativa',
-        'Identificar as principais ferramentas de IA disponíveis para educação',
-        'Reconhecer as aplicações práticas da IA no contexto do AEE',
-        'Entender os limites e possibilidades da tecnologia na educação especial',
+        'Apresentar a trajetória da IA até os dias atuais',
+        'Introduzir algumas noções básicas para construir um bom prompt',
+        'IA Generativa como aliada para o docente na educação especial',
+        'Abordar os benefícios e riscos do uso da IA',
     ];
 
     const materiaisDownload = [
         {
             nome: 'Apresentação - Introdução à IAGen',
-            arquivo: '/materiais/aula1-introducao.pdf',
+            arquivo: '/materiais/AULA1.pdf',
         },
     ];
 
@@ -34,11 +19,10 @@ const Aula1 = () => {
         <AulaTemplate
             numeroAula={1}
             titulo="Introdução da IAGen"
-            descricao="Nesta primeira aula, vamos explorar os fundamentos da Inteligência Artificial Generativa e compreender como essa tecnologia pode revolucionar a forma como criamos materiais e recursos para o Atendimento Educacional Especializado."
+            descricao="Essa aula tem como objetivo introduzir os conceitos e aplicações da IA Generativa na área educacional e os momentos históricos da área. As implicações éticas e os benefícios da IA na educação especial também será abordada."
             objetivos={objetivos}
-            prompts={prompts}
             materiaisDownload={materiaisDownload}
-            color="from-blue-500 to-cyan-500"
+            color="from-[#ff5757] to-[#ff8787]"
         />
     );
 };

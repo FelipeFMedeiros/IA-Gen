@@ -35,12 +35,8 @@ const Aula3 = () => {
 
     const materiaisDownload = [
         {
-            nome: 'Guia de Adaptação de Recursos',
-            arquivo: '/materiais/Tópicos_Grupo 03_ IAGen para AEE I - Criando Recursos e Materiais de Apoio.pdf',
-        },
-        {
-            nome: 'Exemplos de Atividades Adaptadas',
-            arquivo: '/materiais/aula3-exemplos.pdf',
+            nome: 'Apresentação - Criando Recursos e Materiais de Apoio',
+            arquivo: '/materiais/AULA3.pdf',
         },
     ];
 
@@ -52,7 +48,7 @@ const Aula3 = () => {
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
-            color="from-green-500 to-teal-500"
+            color="from-[#ff914d] to-[#ffb380]"
         />
     );
 };

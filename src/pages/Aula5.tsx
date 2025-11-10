@@ -3,53 +3,24 @@ import AulaTemplate from '../components/AulaTemplate';
 const Aula5 = () => {
     const prompts = [
         {
-            titulo: 'Prompt 1: Estrutura do Relatório',
-            texto: 'Crie um modelo estruturado de Relatório de Desenvolvimento Individualizado para um aluno com [TIPO DE DEFICIÊNCIA]. O relatório deve incluir as seguintes seções: 1) Identificação do aluno, 2) Histórico educacional, 3) Descrição do funcionamento atual, 4) Objetivos trabalhados no período, 5) Estratégias utilizadas, 6) Progressos observados, 7) Dificuldades persistentes, 8) Recomendações e próximos passos.',
+            titulo: 'Prompt 1: Criação de Relatório de Desenvolvimento Individualizado',
+            texto: '"Atue como um(a) pedagogo(a) especialista em educação inclusiva. Sua tarefa é redigir um Relatório de Desenvolvimento Individualizado (PDI) com base nas informações fornecidas a seguir. O relatório final deve ser um texto único, coeso e corrido, com uma linguagem profissional, descritiva e empática. Não utilize tópicos ou listas no texto final. Estruture o relatório de forma lógica, conectando as diferentes seções para criar uma narrativa fluida sobre o desenvolvimento do estudante."\n\n[INÍCIO DAS INFORMAÇÕES - PREENCHA OS CAMPOS ABAIXO]\n\n1. Título do Documento:\nRelatório de Desenvolvimento Individualizado\n\n2. Período Avaliativo:\nDe: [Ex: Março de 2024]\nAté: [Ex: Junho de 2024]\n\n3. Caracterização do Estudante:\nNome: [Nome completo do aluno]\nIdade: [Idade do aluno durante o período avaliativo]\nAno/Série: [Ano/série que o aluno está cursando]\nDescrição Geral: [Descreva o perfil do aluno. Inclua informações sobre seu comportamento, como costuma interagir com colegas e professores, seus interesses, pontos fortes, se é comunicativo(a), tímido(a), agitado(a), etc. Mencione brevemente, se houver, algum diagnóstico relevante e como ele se manifesta no ambiente escolar.]\n\n4. Frequência:\nAssiduidade: [Relate a frequência do aluno. Por exemplo: "O(A) aluno(a) foi assíduo(a) e participativo(a) durante todo o período, não apresentando faltas que comprometessem o processo de aprendizagem." ou "Apresentou um número significativo de faltas (X faltas), sendo a família contatada para orientação. As ausências impactaram parcialmente o desenvolvimento das atividades propostas."]\n\n5. Avaliação Inicial (Nível de Desempenho no Início do Período):\nDesempenho Acadêmico Inicial: [Descreva o que o aluno sabia e quais eram suas principais dificuldades no início do atendimento. Em relação à linguagem: como era sua leitura e escrita? Em relação à matemática: reconhecia números, realizava operações simples? Ex: "Inicialmente, o(a) aluno(a) reconhecia apenas as vogais e não estabelecia relação entre letra e som..."]\nDesempenho Funcional Inicial: [Descreva as habilidades de autonomia, comunicação, interação social e motoras no início do período. Ex: "Apresentava dificuldade em organizar seus materiais, dependia de mediação constante para iniciar interações com os colegas e possuía preensão do lápis inadequada."]\n\n6. Objetivos de Aprendizagem Propostos no PAEE (Plano de Atendimento Educacional Especializado):\nObjetivos: [Liste de forma clara os principais objetivos traçados para o aluno. Ex: "1. Desenvolver a consciência fonológica, associando fonemas e grafemas; 2. Aprimorar a coordenação motora fina para o traçado de letras e números; 3. Ampliar a capacidade de interação social, participando de atividades em grupo; 4. Reconhecer e quantificar números até 20."]\n\n7. Metodologia e Recursos Didáticos Utilizados:\nEstratégias e Recursos: [Descreva as abordagens, atividades e materiais que foram utilizados para alcançar os objetivos. Ex: "Foram realizadas intervenções individualizadas, utilizando uma abordagem lúdica com jogos pedagógicos, recursos visuais e materiais concretos (alfabeto móvel, material dourado). Também foram empregados softwares educativos em tablet para estimular o raciocínio lógico e a atenção, sempre com mediação constante do(a) professor(a)."]\n\n8. Resultados das Intervenções (Progresso Observado):\nEvolução e Análise: [Descreva detalhadamente o progresso do aluno em relação a cada um dos objetivos propostos. Aponte os avanços, mesmo que sutis, e as dificuldades que ainda persistem. Use exemplos concretos. Ex: "O(A) estudante demonstrou um avanço significativo no reconhecimento de todas as letras do alfabeto e já consegue formar sílabas simples. Sua participação nas atividades em grupo aumentou, embora ainda precise de incentivo para iniciar o diálogo. O traçado das letras está mais firme. Em relação à matemática, já reconhece os números até 15, mas ainda apresenta dificuldade na contagem sequencial..."]\n\n9. Parecer Final (Conclusão e Recomendações):\nParecer: [Com base nos resultados, emita um parecer conclusivo. Indique se o aluno deve continuar no atendimento, se precisa de algum encaminhamento para outros profissionais ou se atingiu os objetivos e pode ter alta do serviço. Ex: "Diante dos avanços observados, sugere-se a continuidade dos atendimentos no próximo semestre para consolidar as habilidades de leitura e escrita e ampliar os conceitos matemáticos." ou "Recomenda-se o encaminhamento para uma avaliação fonoaudiológica para investigar questões relacionadas à linguagem oral." ou "Considerando que o(a) aluno(a) atingiu os objetivos propostos, demonstrando autonomia e superação de suas dificuldades iniciais, sugere-se a liberação dos atendimentos especializados, com acompanhamento e monitoramento do professor da sala de aula regular."]',
         },
         {
-            titulo: 'Prompt 2: Descrição de Habilidades',
-            texto: 'Ajude-me a descrever de forma detalhada e profissional as habilidades desenvolvidas pelo aluno [INICIAIS] com [DEFICIÊNCIA] nas seguintes áreas:\n- Área cognitiva: [DESCREVA OBSERVAÇÕES]\n- Área motora: [DESCREVA OBSERVAÇÕES]\n- Área socioemocional: [DESCREVA OBSERVAÇÕES]\n- Área comunicativa: [DESCREVA OBSERVAÇÕES]\n\nUse linguagem técnica apropriada para um relatório pedagógico.',
-        },
-        {
-            titulo: 'Prompt 3: Objetivos e Metas',
-            texto: 'Com base no perfil do aluno: [DESCREVA O PERFIL], e considerando os progressos já alcançados: [LISTE PROGRESSOS], sugira 5 objetivos específicos e mensuráveis para os próximos 6 meses. Para cada objetivo, indique: 1) Habilidade a ser desenvolvida, 2) Estratégias sugeridas, 3) Recursos necessários, 4) Indicadores de sucesso.',
-        },
-        {
-            titulo: 'Prompt 4: Análise Comparativa',
-            texto: 'Compare o desempenho atual do aluno com o início do período letivo. Dados iniciais: [COLE INFORMAÇÕES DO INÍCIO DO PERÍODO]. Dados atuais: [COLE INFORMAÇÕES ATUAIS]. Elabore uma análise comparativa destacando: 1) Áreas com maior evolução, 2) Áreas que necessitam mais atenção, 3) Fatores que contribuíram para o progresso, 4) Sugestões de continuidade.',
-        },
-        {
-            titulo: 'Prompt 5: Recomendações Profissionais',
-            texto: 'Baseado no desenvolvimento do aluno com [DEFICIÊNCIA] e nas seguintes observações: [DESCREVA AS PRINCIPAIS OBSERVAÇÕES], elabore recomendações profissionais para: 1) Professores da sala regular, 2) Família, 3) Profissionais de apoio (psicólogo, fonoaudiólogo, etc.), 4) Gestão escolar. As recomendações devem ser práticas e fundamentadas.',
-        },
-        {
-            titulo: 'Prompt 6: Revisão e Refinamento',
-            texto: 'Revise o seguinte trecho do relatório e melhore a redação mantendo o conteúdo técnico, mas tornando-o mais claro e objetivo: [COLE O TRECHO DO RELATÓRIO]. Corrija também possíveis erros gramaticais e sugira uma linguagem mais profissional quando necessário.',
+            titulo: 'Prompt 2: Revisão e Aprimoramento com Método SMART',
+            texto: 'Atue como um(a) pedagogo(a) especialista em educação inclusiva. Sua tarefa é reescrever o relatório abaixo, focando em melhorar a clareza, a coesão e a estrutura profissional do texto.\nUse os princípios do método SMART (Específico, Mensurável, Atingível, Relevante, Temporal) como um guia interno para reestruturar os objetivos de aprendizagem e a avaliação dos resultados, garantindo que o progresso do aluno seja descrito de forma concreta e compreensível.\n\nFormato de Entrega: O resultado deve ser apenas o texto corrido do relatório final revisado.\nNão inclua tópicos, explicações sobre o método, tabelas ou comparações de "Antes e Depois".',
         },
     ];
 
     const objetivos = [
-        'Aprender a estruturar relatórios pedagógicos completos e profissionais',
-        'Dominar a linguagem técnica apropriada para documentos educacionais',
-        'Desenvolver habilidade de síntese e análise de dados observacionais',
-        'Criar objetivos mensuráveis e alcançáveis para os alunos',
-        'Elaborar recomendações práticas e fundamentadas',
-        'Usar IA como ferramenta de apoio na redação e revisão de relatórios',
-        'Garantir documentação adequada para acompanhamento multidisciplinar',
+        'Auxiliar a escrita e a correção do relatório do PAEE',
+        'Fornecer exemplos de prompts específicos para diferentes seções do relatório',
     ];
 
     const materiaisDownload = [
         {
-            nome: 'Modelo de Relatório Individualizado',
-            arquivo: '/materiais/aula5-modelo-relatorio.pdf',
-        },
-        {
-            nome: 'Checklist para Relatórios',
-            arquivo: '/materiais/aula5-checklist.pdf',
-        },
-        {
-            nome: 'Glossário de Termos Técnicos',
-            arquivo: '/materiais/aula5-glossario.pdf',
+            nome: 'Apresentação - Relatório de Desenvolvimento Individualizado',
+            arquivo: '/materiais/AULA5.pdf',
         },
     ];
 
@@ -57,11 +28,11 @@ const Aula5 = () => {
         <AulaTemplate
             numeroAula={5}
             titulo="IAGen para AEE III - Relatórios"
-            descricao="Domine a arte de criar Relatórios de Desenvolvimento Individualizado completos e profissionais com o auxílio da IA. Nesta aula final, você aprenderá a documentar adequadamente o progresso dos alunos, elaborar análises detalhadas e comunicar resultados de forma clara e técnica."
+            descricao="O propósito desta aula é oferecer orientações e esclarecer dúvidas a respeito da aplicação da Inteligência Artificial na criação do Relatório de Desenvolvimento Individualizado. Serão mostrados exemplos de prompts e modelos de relatórios que contribuem para a produção de resultados mais precisos e eficientes, possibilitando que os professores utilizem melhor seu tempo em outras tarefas pedagógicas."
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
-            color="from-indigo-500 to-blue-500"
+            color="from-[#0081cc] to-[#005a99]"
         />
     );
 };
