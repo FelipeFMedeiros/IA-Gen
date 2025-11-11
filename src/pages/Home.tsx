@@ -20,14 +20,14 @@ const Home = () => {
         {
             numero: 3,
             titulo: 'IAGen para AEE I',
-            descricao: 'Ideias para adaptar recursos educacionais para alunos com necessidades especiais',
+            descricao: 'Aplicação prática de IA Generativa para criar recursos adaptados, otimizar planejamento e desenvolver estratégias personalizadas para a diversidade',
             icon: '💡',
             color: 'from-[#ff914d] to-[#ffb380]',
         },
         {
             numero: 4,
             titulo: 'IAGen para AEE II',
-            descricao: 'Monitoramento da execução das adaptações e acompanhamento dos alunos',
+            descricao: 'Como usar IA generativa para auxiliar no monitoramento das adaptações e ferramentas utilizadas nas aulas para alunos com condições especiais',
             icon: '📊',
             color: 'from-[#7521ac] to-[#a855f7]',
         },

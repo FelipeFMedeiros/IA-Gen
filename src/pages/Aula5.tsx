@@ -22,6 +22,10 @@ const Aula5 = () => {
             nome: 'Apresentação - Relatório de Desenvolvimento Individualizado',
             arquivo: '/materiais/AULA5.pdf',
         },
+        {
+            nome: 'Prompt Exemplo - Mal Preenchido',
+            arquivo: '/materiais/Prompt_Mal_Preenchido.pdf',
+        },
     ];
 
     return (

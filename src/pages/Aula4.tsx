@@ -4,33 +4,15 @@ const Aula4 = () => {
     const prompts = [
         {
             titulo: 'Prompt 1: Critérios de Avaliação Adaptados',
-            texto: 'Crie critérios de avaliação adaptados para um aluno com [TIPO DE DEFICIÊNCIA] que está trabalhando com [ATIVIDADE/CONTEÚDO]. Os critérios devem: 1) Ser mensuráveis e objetivos, 2) Considerar as limitações e potencialidades do aluno, 3) Focar no progresso individual, 4) Incluir diferentes formas de demonstração do aprendizado.',
-        },
-        {
-            titulo: 'Prompt 2: Registro de Observações',
-            texto: 'Ajude-me a criar um template de registro diário de observações para monitorar o desenvolvimento de um aluno com [DEFICIÊNCIA]. O template deve incluir: 1) Áreas de desenvolvimento (cognitivo, motor, social, emocional), 2) Espaço para observações específicas, 3) Indicadores de progresso, 4) Sugestões de intervenções.',
-        },
-        {
-            titulo: 'Prompt 3: Análise de Progresso',
-            texto: 'Com base nas seguintes observações sobre o aluno [NOME/INICIAIS]: [COLE AS OBSERVAÇÕES]. Analise: 1) Principais avanços identificados, 2) Dificuldades persistentes, 3) Estratégias que funcionaram bem, 4) Recomendações para próximas intervenções, 5) Aspectos que requerem atenção especial.',
-        },
-        {
-            titulo: 'Prompt 4: Ajuste de Estratégias',
-            texto: 'A estratégia atual para ensinar [CONTEÚDO] ao aluno com [DEFICIÊNCIA] não está surtindo o efeito esperado. As dificuldades observadas são: [DESCREVA AS DIFICULDADES]. Sugira 5 estratégias alternativas de intervenção pedagógica, explicando como implementá-las e quais resultados esperar.',
-        },
-        {
-            titulo: 'Prompt 5: Comunicação com a Família',
-            texto: 'Redija um comunicado para a família do aluno sobre o progresso observado este mês. Inclua: 1) Conquistas e avanços (tom positivo), 2) Áreas que ainda precisam de apoio, 3) Sugestões de atividades para fazer em casa, 4) Próximos objetivos. Use linguagem acessível e acolhedora.',
+            texto: 'Instruções de Contexto e Formato: "Você é um assistente de coleta e estruturação de dados para monitoramento de sessões de Educação Especial, com base na Análise do Comportamento (ABA). Sua tarefa é extrair e formatar os dados de monitoramento. Use um tom estritamente objetivo. Gere *apenas o conteúdo* para as 8 colunas especificadas, separadas por ponto e vírgula (;), na ordem listada, sem títulos ou frases introdutórias."\n\nDados de Entrada do Professor (Preenchidos):\n1. DATA\n2. ALUNO:\n3. CONDICAO_ESPECIAL:\n4. META_RASTREADA:\n5. FERRAMENTA_USADA:\n6. DADOS DETALHADOS DA SESSÃO (Preencha objetivamente):\nA - ANTECEDENTE PRINCIPAL: O professor pediu para ler um artigo de ciências de 6º ano.\nDURACAO_TOTAL_SESSAO: 30\nTEMPO_DE_FOCO: 27\nCONTAGEM_INCIDENTES: 0\nRESULTADO_BRUTO: 9 em 12 perguntas.\nC - CONSEQUENCIA CRÍTICA: Elogio de grupo e folha de registro de progresso.',
         },
     ];
 
     const objetivos = [
-        'Desenvolver estratégias de monitoramento contínuo do aluno',
-        'Aprender a registrar e analisar observações de forma sistemática',
-        'Criar ferramentas personalizadas de acompanhamento',
-        'Identificar padrões de progresso e áreas de dificuldade',
-        'Ajustar intervenções pedagógicas com base em dados observados',
-        'Comunicar efetivamente com famílias e equipe multidisciplinar',
+        'Esta aula tem como objetivo apresentar, de forma clara e prática, como usar a IA generativa para auxiliar no monitoramento da execução das adaptações – a habilidade de operar com eficácia com essas ferramentas.',
+        'Nosso foco é demonstrar como o professor pode utilizar essas ferramentas para melhorar o monitoramento das ferramentas que são utilizadas nas aulas para alunos com condições especiais',
+        'Conceitos básicos do Gemini para auxiliar no monitoramento',
+        'Conceitos básicos do google planilhas para guardar informações do monitoramento',
     ];
 
     const materiaisDownload = [
@@ -43,8 +25,8 @@ const Aula4 = () => {
     return (
         <AulaTemplate
             numeroAula={4}
-            titulo="IAGen para AEE II - Monitoramento"
-            descricao="Aprenda a usar IA como aliada no monitoramento do desenvolvimento dos alunos. Nesta aula, você descobrirá como criar ferramentas de acompanhamento, analisar progressos e ajustar estratégias pedagógicas de forma eficaz."
+            titulo="IAGen para AEE II - Monitoramento da execução das adaptações"
+            descricao="Esta aula tem como objetivo apresentar, de forma clara e prática, como usar a IA generativa para auxiliar no monitoramento da execução das adaptações – a habilidade de operar com eficácia com essas ferramentas. Nosso foco é demonstrar como o professor pode utilizar essas ferramentas para melhorar o monitoramento das ferramentas que são utilizadas nas aulas para alunos com condições especiais."
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
