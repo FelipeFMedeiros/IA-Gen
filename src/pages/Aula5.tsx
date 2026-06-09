@@ -28,6 +28,13 @@ const Aula5 = () => {
         },
     ];
 
+    const referencias = [
+        { titulo: 'DOS SANTOS JR, Francisco Dutra et al. Inteligência artificial e educação especial: Desafios éticos. In: WORKSHOP DE DESAFIOS DA COMPUTAÇÃO APLICADA À EDUCAÇÃO (DESAFIE!), 2019. Anais [...]. [S. l.]: SBC, 2019. p. 13-15.' },
+        { titulo: 'NUNES, Débora Regina de Paula; FIGUEROLA, Wilfredo Blanco; AZEVEDO, Mariana Orrico de. Análise de demandas acadêmicas e funcionais de alunos com autismo: utilização de inteligência artificial em relatórios pedagógicos. In: DELIBERATO, Débora; GONÇALVES, Maria de Jesus; MANZINI, Eduardo José (Org.). Pesquisas e trabalho colaborativo: práticas para a formação de profissionais da Educação Especial. Goiânia: Editora Sobama, 2025. p. 207-223.' },
+        { titulo: 'THE IRIS CENTER. IEPS: Developing high-quality individualized education programs. 2019.', link: 'https://iris.peabody.vanderbilt.edu/module/iep01/' },
+        { titulo: 'DORAN, George T. There’s a S.M.A.R.T. way to write management’s goals and objectives. Management Review, New York, v. 70, n. 11, p. 35-36, nov. 1981.', link: 'https://www.eval.fr/wp-content/uploads/2020/01/S.M.A.R.T-Way-Management-Review-eval.fr_.pdf' }
+    ];
+
     return (
         <AulaTemplate
             numeroAula={5}
@@ -36,6 +43,7 @@ const Aula5 = () => {
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
+            referencias={referencias}
             color="from-[#0081cc] to-[#005a99]"
         />
     );

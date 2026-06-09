@@ -45,6 +45,36 @@ const Aula2 = () => {
         },
     ];
 
+    const referencias = [
+        { 
+            titulo: 'AWS. O que é Prompt Engineering? [S.l.]: Amazon Web Services.'
+        },
+        { 
+            titulo: 'BROWN, T. B. et al. Language Models are Few-Shot Learners. 2020.', 
+            link: 'https://arxiv.org/abs/2005.14165' 
+        },
+        { 
+            titulo: 'IBM. A engenharia de prompts. [S.l.]: IBM.', 
+            link: 'https://www.ibm.com/br-pt/think/topics/prompt-engineering' 
+        },
+        { 
+            titulo: 'LEWIS, P. et al. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. 2020.', 
+            link: 'https://arxiv.org/abs/2005.11401' 
+        },
+        { 
+            titulo: 'MICROSOFT. Introdução aos conceitos básicos de IA generativa. [S. l.], [2023?].', 
+            link: 'https://learn.microsoft.com/pt-br/training/modules/intro-generative-ai-explore-basics/' 
+        },
+        { 
+            titulo: 'MICROSOFT. Criar prompts para ferramentas de IA generativa. [S. l.], [2023?].', 
+            link: 'https://learn.microsoft.com/pt-br/training/modules/create-prompts-for-generative-ai-training-tools/' 
+        },
+        { 
+            titulo: 'MICROSOFT. Criar imagens com IA generativa. [S. l.], [2023?].', 
+            link: 'https://learn.microsoft.com/pt-br/training/modules/create-images-with-generative-ai/' 
+        }
+    ];
+
     return (
         <AulaTemplate
             numeroAula={2}
@@ -53,6 +83,7 @@ const Aula2 = () => {
             objetivos={objetivos}
             prompts={prompts}
             materiaisDownload={materiaisDownload}
+            referencias={referencias}
             color="from-[#10bb82] to-[#0d8f66]"
         />
     );

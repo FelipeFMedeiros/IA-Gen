@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom';
-import { ArrowLeft, Download, Copy, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Download, Copy, CheckCircle, BookOpen } from 'lucide-react';
 import { useState } from 'react';
 
 interface Prompt {
     titulo: string;
     texto: string;
     exemplo?: string;
+}
+
+interface Referencia {
+    titulo: string;
+    link?: string;
 }
 
 interface AulaTemplateProps {
@@ -18,6 +23,7 @@ interface AulaTemplateProps {
         nome: string;
         arquivo: string;
     }[];
+    referencias?: Referencia[];
     color: string;
 }
 
@@ -28,6 +34,7 @@ const AulaTemplate = ({
     objetivos,
     prompts,
     materiaisDownload,
+    referencias,
     color,
 }: AulaTemplateProps) => {
     const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -51,16 +58,9 @@ const AulaTemplate = ({
                         <ArrowLeft size={20} />
                         <span>Voltar para início</span>
                     </NavLink>
-                    <div className="flex items-center gap-4">
-                        <img
-                            src="/logoCEEE.jpeg"
-                            alt="Logo CEESP"
-                            className="h-16 w-16 rounded-full border-4 border-white shadow-lg"
-                        />
-                        <div>
-                            <div className="text-sm font-semibold opacity-90 mb-1">AULA {numeroAula}</div>
-                            <h1 className="text-4xl font-bold">{titulo}</h1>
-                        </div>
+                    <div>
+                        <div className="text-sm font-semibold opacity-90 mb-1">AULA {numeroAula}</div>
+                        <h1 className="text-4xl font-bold">{titulo}</h1>
                     </div>
                 </div>
             </header>
@@ -158,6 +158,46 @@ const AulaTemplate = ({
                                 </a>
                             ))}
                         </div>
+                    </div>
+                )}
+
+                {/* Referências */}
+                {referencias && referencias.length > 0 && (
+                    <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                            <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                                <BookOpen className="text-blue-600" size={28} />
+                                Referências da Aula
+                            </h2>
+                            <a
+                                href={`/referencias/Referencias-Aula${numeroAula}.pdf`}
+                                download
+                                className="flex items-center gap-2 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 px-4 py-2 rounded-lg font-semibold transition-colors"
+                            >
+                                <Download size={20} />
+                                Baixar Referências
+                            </a>
+                        </div>
+                        <ul className="space-y-4">
+                            {referencias.map((ref, index) => (
+                                <li key={index} className="flex flex-col sm:flex-row sm:items-center gap-2">
+                                    <div className="flex items-center gap-2 text-gray-800 font-medium">
+                                        <div className="w-2 h-2 rounded-full bg-blue-600"></div>
+                                        {ref.titulo}
+                                    </div>
+                                    {ref.link && (
+                                        <a
+                                            href={ref.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 hover:text-blue-800 hover:underline text-sm sm:ml-4"
+                                        >
+                                            Acessar link →
+                                        </a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 )}
 
