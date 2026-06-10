@@ -43,12 +43,12 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
             {/* Header */}
-            <header className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-8 shadow-lg">
-                <div className="container mx-auto px-4">
-                    <div className="flex items-center">
-                        <h1 className="text-4xl font-bold mb-2">IAGen para AEE</h1>
-                        <div className="ml-4 border-l-2 border-blue-400 pl-4">
-                            <p className="text-blue-50 font-medium max-w-md">
+            <header className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-6 sm:py-8 shadow-lg">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4 sm:gap-0">
+                        <h1 className="text-3xl sm:text-4xl font-bold mb-0 sm:mb-2">IAGen para AEE</h1>
+                        <div className="sm:ml-4 sm:border-l-2 sm:border-blue-400 sm:pl-4">
+                            <p className="text-blue-50 font-medium max-w-md text-sm sm:text-base">
                                 Inteligência Artificial Generativa no Atendimento Educacional Especializado
                             </p>
                         </div>
@@ -57,37 +57,37 @@ const Home = () => {
             </header>
 
             {/* Hero Section */}
-            <section className="container mx-auto px-4 py-12">
-                <div className="text-center mb-12">
-                    <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-md">
+            <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+                <div className="text-center mb-10 sm:mb-12">
+                    <div className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 shadow-md">
                         🎓 SME Natal & UERN
                     </div>
-                    <h2 className="text-5xl font-bold text-gray-800 mb-4 tracking-tight">
+                    <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 tracking-tight">
                         Transforme sua prática educacional com IA
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-10">
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10">
                         Capacitação para professores do Atendimento Educacional Especializado do Ensino Fundamental.
                         Aprenda a criar recursos e materiais de apoio inovadores utilizando ferramentas de Inteligência Artificial.
                     </p>
                     
-                    <div className="flex flex-wrap justify-center items-center gap-8">
+                    <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
                         <img
                             src="/logo-prefeitura.png"
                             alt="Logo SME Natal"
-                            className="h-20 object-contain drop-shadow-sm"
+                            className="h-16 sm:h-20 object-contain drop-shadow-sm"
                         />
                         <img
                             src="/logo-uern-1.png"
                             alt="Logo UERN"
-                            className="h-20 object-contain drop-shadow-sm"
+                            className="h-16 sm:h-20 object-contain drop-shadow-sm"
                         />
                     </div>
                 </div>
 
                 {/* Sobre o Projeto */}
-                <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
-                    <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                        <Brain className="text-blue-600" size={36} />
+                <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 mb-10 sm:mb-12">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                        <Brain className="text-blue-600" size={32} />
                         Sobre o Projeto
                     </h3>
                     <div className="grid md:grid-cols-2 gap-8">
@@ -137,9 +137,9 @@ const Home = () => {
                 </div>
 
                 {/* Cards das Aulas */}
-                <div className="mb-12">
-                    <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">Aulas do Curso</h3>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="mb-10 sm:mb-12">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">Aulas do Curso</h3>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {aulas.map((aula) => (
                             <NavLink
                                 key={aula.numero}
@@ -149,20 +149,20 @@ const Home = () => {
                             >
                                 <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden h-full transform hover:-translate-y-2">
                                     <div className={`h-2 bg-gradient-to-r ${aula.color}`}></div>
-                                    <div className="p-6">
+                                    <div className="p-5 sm:p-6">
                                         <div className="flex items-center gap-4 mb-4">
-                                            <div className="text-5xl">{aula.icon}</div>
+                                            <div className="text-4xl sm:text-5xl">{aula.icon}</div>
                                             <div className="flex-1">
-                                                <div className="text-sm font-semibold text-gray-500 mb-1">
+                                                <div className="text-xs sm:text-sm font-semibold text-gray-500 mb-1">
                                                     AULA {aula.numero}
                                                 </div>
-                                                <h4 className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
+                                                <h4 className="text-lg sm:text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
                                                     {aula.titulo}
                                                 </h4>
                                             </div>
                                         </div>
-                                        <p className="text-gray-600 mb-4">{aula.descricao}</p>
-                                        <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
+                                        <p className="text-sm sm:text-base text-gray-600 mb-4">{aula.descricao}</p>
+                                        <div className="flex items-center text-blue-600 text-sm sm:text-base font-semibold group-hover:gap-3 gap-2 transition-all">
                                             <span>Acessar aula</span>
                                             <span className="group-hover:translate-x-1 transition-transform">→</span>
                                         </div>
@@ -175,7 +175,7 @@ const Home = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-800 text-white py-8 mt-12">
+            <footer className="bg-gray-800 text-white py-6 sm:py-8 mt-8 sm:mt-12">
                 <div className="container mx-auto px-4 text-center">
                     <p className="text-gray-300 font-semibold mb-2">
                         Setor de Educação Especial - SME Natal / RN
