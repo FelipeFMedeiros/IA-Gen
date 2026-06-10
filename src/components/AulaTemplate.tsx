@@ -201,6 +201,26 @@ const AulaTemplate = ({
                     </div>
                 )}
 
+                {/* Questionário de Avaliação */}
+                <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl shadow-xl p-8 mb-8 text-white text-center transform hover:-translate-y-1 transition-transform duration-300">
+                    <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
+                        <span className="text-4xl">📝</span> Avalie esta Aula
+                    </h2>
+                    <p className="text-lg text-indigo-50 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        Seu feedback sincero é fundamental para entendermos o impacto dessas novas ferramentas na prática pedagógica e aprimorarmos futuras formações. 
+                        Garante que vamos ler tudo com carinho e leva <strong>apenas 5 minutinhos!</strong>
+                    </p>
+                    <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeuVIFpZDXHcDv0XZExajYos8gg7YRw6cJkQtZKm0VFl1oDRQ/viewform"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-white text-purple-700 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                    >
+                        <span>Ir para o Formulário</span>
+                        <span>→</span>
+                    </a>
+                </div>
+
                 {/* Navegação entre aulas */}
                 <div className="flex justify-between items-center">
                     {numeroAula > 1 && (
