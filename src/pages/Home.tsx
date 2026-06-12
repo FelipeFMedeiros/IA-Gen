@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Brain, Sparkles, GraduationCap, Activity, Monitor } from 'lucide-react';
+//import { Brain, Sparkles, GraduationCap, Activity, Monitor } from 'lucide-react';
 
 const Home = () => {
     const aulas = [
@@ -85,6 +85,7 @@ const Home = () => {
                 </div>
 
                 {/* Sobre o Projeto */}
+                {/*
                 <div className="bg-white rounded-2xl shadow-xl p-5 sm:p-8 mb-10 sm:mb-12">
                     <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
                         <Brain className="text-blue-600" size={32} />
@@ -135,6 +136,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                */}
 
                 {/* Cards das Aulas */}
                 <div className="mb-10 sm:mb-12">

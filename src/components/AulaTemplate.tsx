@@ -85,59 +85,12 @@ const AulaTemplate = ({
                     </ul>
                 </div>
 
-                {/* Prompts */}
-                {prompts && prompts.length > 0 && (
-                <div className="bg-white rounded-xl shadow-lg p-5 sm:p-8 mb-6 sm:mb-8">
-                    <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-5 sm:mb-6">Prompts para Usar nas IAs</h2>
-                    <div className="space-y-6">
-                        {prompts?.map((prompt, index) => (
-                            <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                                <div className={`bg-gradient-to-r ${color} text-white px-4 py-3 text-sm sm:text-base font-semibold`}>
-                                    {prompt.titulo}
-                                </div>
-                                <div className="p-4 sm:p-5 bg-gray-50">
-                                    <div className="flex flex-col xl:flex-row justify-between items-start gap-4 mb-3">
-                                        <p className="text-gray-700 w-full xl:flex-1 font-mono text-xs sm:text-sm whitespace-pre-wrap overflow-x-auto">
-                                            {prompt.texto}
-                                        </p>
-                                        <button
-                                            onClick={() => copyToClipboard(prompt.texto, index)}
-                                            className={`flex items-center justify-center w-full xl:w-auto gap-2 px-4 py-2 sm:py-2.5 rounded-lg transition-all ${
-                                                copiedIndex === index
-                                                    ? 'bg-green-500 text-white'
-                                                    : 'bg-blue-600 text-white hover:bg-blue-700 hover:cursor-pointer'
-                                            }`}
-                                        >
-                                            {copiedIndex === index ? (
-                                                <>
-                                                    <CheckCircle size={18} />
-                                                    <span className="text-sm font-semibold">Copiado!</span>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <Copy size={18} />
-                                                    <span className="text-sm font-semibold">Copiar</span>
-                                                </>
-                                            )}
-                                        </button>
-                                    </div>
-                                    {prompt.exemplo && (
-                                        <div className="mt-4 pt-4 border-t border-gray-300">
-                                            <p className="text-xs text-gray-600 font-bold mb-2">EXEMPLO:</p>
-                                            <p className="text-gray-600 text-xs sm:text-sm italic">{prompt.exemplo}</p>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                )}
-
                 {/* Materiais para Download */}
                 {materiaisDownload && materiaisDownload.length > 0 && (
                     <div className="bg-white rounded-xl shadow-lg p-5 sm:p-8 mb-6 sm:mb-8">
-                        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-5 sm:mb-6">Materiais para Download</h2>
+                        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-5 sm:mb-6">
+                            Materiais para Download
+                        </h2>
                         <div className="grid gap-4">
                             {materiaisDownload.map((material, index) => (
                                 <a
@@ -150,12 +103,69 @@ const AulaTemplate = ({
                                         <div className="bg-blue-600 text-white p-2.5 sm:p-3 rounded-lg flex-shrink-0">
                                             <Download size={20} className="sm:w-6 sm:h-6" />
                                         </div>
-                                        <span className="font-semibold text-gray-800 text-sm sm:text-base">{material.nome}</span>
+                                        <span className="font-semibold text-gray-800 text-sm sm:text-base">
+                                            {material.nome}
+                                        </span>
                                     </div>
                                     <span className="text-blue-600 text-sm font-semibold group-hover:translate-x-1 transition-transform self-end sm:self-auto">
                                         Baixar →
                                     </span>
                                 </a>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Prompts */}
+                {prompts && prompts.length > 0 && (
+                    <div className="bg-white rounded-xl shadow-lg p-5 sm:p-8 mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-5 sm:mb-6">
+                            Prompts para Usar nas IAs
+                        </h2>
+                        <div className="space-y-6">
+                            {prompts?.map((prompt, index) => (
+                                <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                                    <div
+                                        className={`bg-gradient-to-r ${color} text-white px-4 py-3 text-sm sm:text-base font-semibold`}
+                                    >
+                                        {prompt.titulo}
+                                    </div>
+                                    <div className="p-4 sm:p-5 bg-gray-50">
+                                        <div className="flex flex-col xl:flex-row justify-between items-start gap-4 mb-3">
+                                            <p className="text-gray-700 w-full xl:flex-1 font-mono text-xs sm:text-sm whitespace-pre-wrap overflow-x-auto">
+                                                {prompt.texto}
+                                            </p>
+                                            <button
+                                                onClick={() => copyToClipboard(prompt.texto, index)}
+                                                className={`flex items-center justify-center w-full xl:w-auto gap-2 px-4 py-2 sm:py-2.5 rounded-lg transition-all ${
+                                                    copiedIndex === index
+                                                        ? 'bg-green-500 text-white'
+                                                        : 'bg-blue-600 text-white hover:bg-blue-700 hover:cursor-pointer'
+                                                }`}
+                                            >
+                                                {copiedIndex === index ? (
+                                                    <>
+                                                        <CheckCircle size={18} />
+                                                        <span className="text-sm font-semibold">Copiado!</span>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <Copy size={18} />
+                                                        <span className="text-sm font-semibold">Copiar</span>
+                                                    </>
+                                                )}
+                                            </button>
+                                        </div>
+                                        {prompt.exemplo && (
+                                            <div className="mt-4 pt-4 border-t border-gray-300">
+                                                <p className="text-xs text-gray-600 font-bold mb-2">EXEMPLO:</p>
+                                                <p className="text-gray-600 text-xs sm:text-sm italic">
+                                                    {prompt.exemplo}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -207,8 +217,9 @@ const AulaTemplate = ({
                         <span className="text-3xl sm:text-4xl">📝</span> Avalie esta Aula
                     </h2>
                     <p className="text-base sm:text-lg text-indigo-50 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
-                        Seu feedback sincero é fundamental para entendermos o impacto dessas novas ferramentas na prática pedagógica e aprimorarmos futuras formações. 
-                        Garante que vamos ler tudo com carinho e leva <strong>apenas 5 minutinhos!</strong>
+                        Seu feedback sincero é fundamental para entendermos o impacto dessas novas ferramentas na
+                        prática pedagógica e aprimorarmos futuras formações. Garante que vamos ler tudo com carinho e
+                        leva <strong>apenas 5 minutinhos!</strong>
                     </p>
                     <a
                         href="https://docs.google.com/forms/d/e/1FAIpQLSeuVIFpZDXHcDv0XZExajYos8gg7YRw6cJkQtZKm0VFl1oDRQ/viewform"
